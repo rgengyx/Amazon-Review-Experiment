@@ -34,7 +34,7 @@ $(function(){
     console.log(review_order)
 
     $.ajax({
-        url: "http://localhost:9808/api/product?id="+getUrlParameter('id'),
+        url: "http://localhost:5000/api/product?id="+getUrlParameter('id'),
         type: 'GET',
         dataType: 'json',
         success: function(res) {
@@ -203,7 +203,7 @@ $(function(){
         })
         
         $.ajax({
-            url: 'http://localhost:9808/api/product/store_rating',
+            url: 'http://localhost:5000/api/product/store_rating',
             type: 'POST',
             data: $.param(formData),
             success: function(res) {

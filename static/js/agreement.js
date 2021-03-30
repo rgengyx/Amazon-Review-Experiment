@@ -33,7 +33,7 @@ $(function(){
         // })
 
         // $.ajax({
-        //     url: 'http://localhost:9808/api/user/store_agreement',
+        //     url: 'http://localhost:5000/api/user/store_agreement',
         //     type: 'POST',
         //     data: $.param(formData),
         //     success: function(res) {

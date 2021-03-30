@@ -4,7 +4,7 @@ $(function(){
         event.preventDefault();
         var combo =  Math.floor(Math.random() * 400)
         $.ajax({
-            url: "http://localhost:9808/api/product/get_order?combo="+combo,
+            url: "http://localhost:5000/api/product/get_order?combo="+combo,
             type: "GET",
             dataType: "JSON",
             success: function(res){
