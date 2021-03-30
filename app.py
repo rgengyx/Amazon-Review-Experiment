@@ -40,4 +40,4 @@ app.register_blueprint(user_api, url_prefix='/api')
 app.register_blueprint(product_api, url_prefix='/api')
 
 if __name__ == '__main__':
-    app.run(port=9808, debug=True)
+    app.run(host='0.0.0.0', port=9808, debug=True)
