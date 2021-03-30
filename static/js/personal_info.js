@@ -74,7 +74,7 @@ $(function(){
         })
 
         $.ajax({
-            url: 'http://localhost:5000/api/user/store',
+            url: 'http://8.130.48.13:5000/api/user/store',
             type: 'POST',
             data: $.param(formData),
             success: function(res) {
