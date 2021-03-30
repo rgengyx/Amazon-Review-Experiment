@@ -1,1 +1,1 @@
-scp amazon_review.sql root@8.130.48.13:.
+scp -r ../../Amazon-Review-Experiment root@8.130.48.13:.
