@@ -182,8 +182,9 @@ $(function(){
     
                 if (i == product_order.length - 1){
                     lastPage = true
+                }else{
+                    nextProductId = product_order[i+1][0]
                 }
-                nextProductId = product_order[i+1][0]
             }
         }
 
