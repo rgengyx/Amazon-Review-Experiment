@@ -2,8 +2,6 @@ $(function(){
 
     $('form#start-experiment').on('submit', function(event) {
         event.preventDefault();
-
-
         var combo =  Math.floor(Math.random() * 400)
         $.ajax({
             url: "http://localhost:9808/api/product/get_order?combo="+combo,

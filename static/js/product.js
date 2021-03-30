@@ -176,11 +176,12 @@ $(function(){
     $('form#review').on('submit', function(event) {
         event.preventDefault();
     
+        lastPage = false
         for(var i =0; i<product_order.length; i++){
             if (product_order[i][0] == productId){
     
                 if (i == product_order.length - 1){
-                    window.location.href = '/thankyou'
+                    lastPage = true
                 }
                 nextProductId = product_order[i+1][0]
             }
@@ -206,12 +207,13 @@ $(function(){
             type: 'POST',
             data: $.param(formData),
             success: function(res) {
-                window.location.href = '/product?id='+ nextProductId;
-                // if(res == "success"){
-                //     window.location.href = '/product?id='+ nextProductId;
-                // } else {
 
-                // }
+                if (lastPage) {
+                    // window.location.href = '/thankyou'
+                }else{
+                    window.location.href = '/product?id='+ nextProductId;
+                }
+
             },
             error: function(err){
                 console.log("err", err)

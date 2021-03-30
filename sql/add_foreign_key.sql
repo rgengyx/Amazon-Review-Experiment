@@ -1,0 +1,1 @@
+ALTER TABLE rating ADD FOREIGN KEY (userId) REFERENCES user(id);

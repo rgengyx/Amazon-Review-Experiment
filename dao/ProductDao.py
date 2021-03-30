@@ -16,7 +16,7 @@ def get_product_by_id(productId):
 
 def store_rating(rating_dict):
     with conn.cursor() as cursor:
-        sql = "INSERT INTO rating VALUES ('" + rating_dict['userId'] + "','r1','" + rating_dict['r1'] + "','" + rating_dict['productId'] + "'),\
+        sql = "INSERT INTO rating (userId, reviewType, rating, productId) VALUES ('" + rating_dict['userId'] + "','r1','" + rating_dict['r1'] + "','" + rating_dict['productId'] + "'),\
                 ('" + rating_dict['userId'] + "','r2','" + rating_dict['r2'] + "','" + rating_dict['productId'] + "'),\
                 ('" + rating_dict['userId'] + "','r3','" + rating_dict['r3'] + "','" + rating_dict['productId'] + "'),\
                 ('" + rating_dict['userId'] + "','r4','" + rating_dict['r4'] + "','" + rating_dict['productId'] + "'),\
@@ -28,11 +28,11 @@ def store_rating(rating_dict):
         conn.commit()
 
 def get_order(combo):
-
     latin_product_review = None
     latin_product = None
     latin_review_combo = None
 
+    # Get review orders for each product
     with conn.cursor(DictCursor) as cursor:
         sql = "SELECT p1, p2, p3, p4, p5, p6, p7, p8, p9, p10 \
                 FROM latin_product_review \
@@ -60,5 +60,5 @@ def get_order(combo):
         cursor.execute(sql)
         latin_review_combo = cursor.fetchall()
 
-    # print(latin_product_review, latin_product, latin_review_combo)
+    print(latin_product_review, latin_product, latin_review_combo)
     return latin_product_review[0], latin_product[0], latin_review_combo
