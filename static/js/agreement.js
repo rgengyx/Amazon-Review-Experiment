@@ -1,5 +1,7 @@
 $(function(){
 
+    $("input").prop("checked", false);
+    
     next_disabled()
 
     function next_disabled(){

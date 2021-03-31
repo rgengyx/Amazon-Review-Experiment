@@ -1,5 +1,7 @@
 $(function(){
 
+    $("input").prop("checked", false);
+
     $('#age').append("<option disabled selected value> -- </option>")
     for (i=1;i<=100;i++){
         $("#age").append($('<option></option>').val(i).html(i))

@@ -24,7 +24,6 @@ $(function(){
     var nextProductId = null
     var review_order = null
 
-
     for(var i =0; i<product_order.length; i++){
         if (product_order[i][0] == productId){
             review_order = product_order[i][1]
