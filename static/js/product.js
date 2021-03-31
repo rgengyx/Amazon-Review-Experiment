@@ -209,7 +209,7 @@ $(function(){
             success: function(res) {
 
                 if (lastPage) {
-                    // window.location.href = '/thankyou'
+                    window.location.href = '/thankyou'
                 }else{
                     window.location.href = '/product?id='+ nextProductId;
                 }
